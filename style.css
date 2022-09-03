@@ -11,7 +11,7 @@
 :root {
   --font-main: "Inter", sans-serif;
   --font-title: "Pacifico", cursive;
-  --clr-banner-bg: hsla(0, 0%, 6%, 40%);
+  --clr-banner-bg: hsla(0, 0%, 6%, 50%);
   --clr-neutral-900: hsl(0, 0%, 6%);
   --clr-neutral-200: hsl(0, 0%, 86%);
   --clr-neutral-100: hsl(0, 0%, 96%);
@@ -40,7 +40,7 @@
   align-items: center;
   gap: 0.5rem;
 
-  margin-top: max(20vh, 1rem);
+  margin-top: max(15vh, 2rem);
   padding: 0.5rem;
 
   background-color: var(--clr-banner-bg);
