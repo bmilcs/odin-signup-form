@@ -93,7 +93,15 @@
                 </div>
                 <div class="input-container">
                   <label for="phone">Phone Number</label>
-                  <input type="tel" id="phone" required tabindex="6" />
+                  <input
+                    type="tel"
+                    id="phone"
+                    pattern="\d{3}[\-]?\d{3}[\-]?\d{4}"
+                    placeholder="111-111-1111"
+                    required
+                    tabindex="6"
+                  />
+
                   <span class="error" aria-live="polite"> </span>
                 </div>
                 <div class="input-container">
