@@ -17,6 +17,7 @@
   --clr-neutral-100: hsl(0, 0%, 96%);
   --clr-accent: hsl(198, 20%, 37%);
   --clr-accent-hover: hsl(198, 20%, 47%);
+  --clr-error: hsl(0, 65%, 45%);
   --clr-banner-bg: hsla(0, 0%, 6%, 50%);
   --clr-shadow: hsla(0, 0%, 6%, 20%);
   --box-shadow: 6px 4px 8px var(--clr-shadow);
@@ -87,13 +88,13 @@ h3 {
   color: var(--clr-neutral-100);
 }
 
-a:hover {
+a:hover,
+a:focus {
   font-weight: 800;
 }
 
 /* right side of the page */
 
-/* top section */
 .body-column-right {
   flex-grow: 1;
 
@@ -109,21 +110,24 @@ a:hover {
   padding: 0 3rem;
 }
 
+/* top section */
+
 .header-container > p {
-  margin-top: 1.5rem;
-  font-size: 1.25rem;
+  margin-top: 1.7rem;
+  font-size: clamp(14px, 1.125rem, 3vw);
 }
 
 .header-container > h2 {
-  font-size: 3.5rem;
+  font-size: clamp(38px, 3.875rem, 4vw);
+  color: var(--clr-accent);
   text-transform: uppercase;
+  /* letter-spacing: 0.075em; */
 }
 
 .header-container > h3 {
   text-transform: uppercase;
-  font-size: 2.125rem;
+  font-size: clamp(30px, 2.5rem, 3vw);
   font-weight: 800;
-  letter-spacing: 0.075em;
   color: var(--clr-neutral-800);
 }
 
@@ -132,6 +136,7 @@ a:hover {
 .bottom-container > button {
   margin-bottom: 1rem;
   padding: 1rem 3rem;
+  outline: none;
   border: 0;
   border-radius: 8px;
 
@@ -143,7 +148,8 @@ a:hover {
   font-weight: 800;
 }
 
-.bottom-container > button:hover {
+.bottom-container > button:hover,
+.bottom-container > button:focus {
   background: var(--clr-accent-hover);
 }
 
@@ -169,14 +175,17 @@ a:hover {
 .form-section {
   display: flex;
   margin-top: 2rem;
-  gap: 4rem;
+  gap: min(2.5vw, 5rem);
 }
 
 .form-left-column,
 .form-right-column {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  flex-grow: 1;
+  max-width: 22.5rem;
+}
+
+.input-container {
+  /* , */
 }
 
 label {
@@ -186,15 +195,44 @@ label {
 
   font-size: 0.9rem;
   font-weight: bold;
+  letter-spacing: 0.075rem;
   text-transform: uppercase;
   color: var(--clr-neutral-800);
 }
 
 input {
+  display: flex;
   padding: 0.5rem 1rem;
+  width: 100%;
 
   border: 2px solid var(--clr-neutral-200);
   border-radius: 4px;
+  outline: none;
 
   font-size: 1rem;
+}
+
+span {
+  display: block;
+  height: 1rem;
+  margin-bottom: 0.1rem;
+
+  font-size: 0.875rem;
+}
+
+input:focus {
+  border: 2px solid var(--clr-accent-hover);
+  box-shadow: var(--box-shadow);
+}
+
+input:invalid {
+  border: 2px solid var(--clr-error);
+}
+
+.error:not[span] {
+  border: 2px solid var(--clr-error);
+}
+
+span.error {
+  color: var(--clr-error);
 }
