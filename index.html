@@ -59,29 +59,53 @@
               <div class="form-left-column">
                 <div class="input-container">
                   <label for="first_name">First Name</label>
-                  <input type="text" id="first_name" autofocus tabindex="3" />
+                  <input
+                    type="text"
+                    id="first_name"
+                    required
+                    autofocus
+                    tabindex="3"
+                  />
+                  <span class="error" aria-live="polite"> </span>
                 </div>
                 <div class="input-container">
                   <label for="email">Email</label>
-                  <input type="email" id="email" tabindex="5" />
+                  <input type="email" id="email" required tabindex="5" />
+                  <span class="error" aria-live="polite"> </span>
                 </div>
                 <div class="input-container">
                   <label for="password">Password</label>
-                  <input type="password" id="password" tabindex="7" />
+                  <input
+                    type="password"
+                    id="password"
+                    class="error"
+                    required
+                    tabindex="7"
+                  />
+                  <span class="error" aria-live="polite"> </span>
                 </div>
               </div>
               <div class="form-right-column">
                 <div class="input-container">
                   <label for="last_name">Last Name</label>
-                  <input type="text" id="last_name" tabindex="4" />
+                  <input type="text" id="last_name" required tabindex="4" />
+                  <span class="error" aria-live="polite"> </span>
                 </div>
                 <div class="input-container">
                   <label for="phone">Phone Number</label>
-                  <input type="tel" id="phone" tabindex="6" />
+                  <input type="tel" id="phone" required tabindex="6" />
+                  <span class="error" aria-live="polite"> </span>
                 </div>
                 <div class="input-container">
                   <label for="password_confirm">Confirm Password</label>
-                  <input type="password" id="password_confirm" tabindex="8" />
+                  <input
+                    type="password"
+                    id="password_confirm"
+                    class="error"
+                    required
+                    tabindex="8"
+                  />
+                  <span class="error" aria-live="polite"> </span>
                 </div>
               </div>
             </div>
