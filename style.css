@@ -231,7 +231,7 @@ input:focus:invalid {
 }
 
 input:invalid {
-  border: 2px solid var(--clr-error);
+  /* border: 2px solid var(--clr-error); */
 }
 
 .error:not[span] {
