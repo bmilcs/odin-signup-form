@@ -16,6 +16,7 @@
   --clr-neutral-200: hsl(0, 0%, 86%);
   --clr-neutral-100: hsl(0, 0%, 96%);
   --clr-accent: hsl(198, 20%, 37%);
+  --clr-accent-hover: hsl(198, 20%, 47%);
   --clr-banner-bg: hsla(0, 0%, 6%, 50%);
   --clr-shadow: hsla(0, 0%, 6%, 20%);
   --box-shadow: 6px 4px 8px var(--clr-shadow);
@@ -92,6 +93,7 @@ a:hover {
 
 /* right side of the page */
 
+/* top section */
 .body-column-right {
   flex-grow: 1;
 
@@ -124,6 +126,33 @@ a:hover {
   letter-spacing: 0.075em;
   color: var(--clr-neutral-800);
 }
+
+/* bottom section */
+
+.bottom-container > button {
+  margin-bottom: 1rem;
+  padding: 1rem 3rem;
+  border: 0;
+  border-radius: 8px;
+
+  background: var(--clr-accent);
+  box-shadow: var(--box-shadow);
+  color: var(--clr-neutral-100);
+
+  font-size: 1.125rem;
+  font-weight: 800;
+}
+
+.bottom-container > button:hover {
+  background: var(--clr-accent-hover);
+}
+
+.body-column-right a,
+.body-column-right a:visited {
+  color: var(--clr-neutral-900);
+}
+
+/* form section */
 
 .form-container {
   padding-block: 3rem;
@@ -168,23 +197,4 @@ input {
   border-radius: 4px;
 
   font-size: 1rem;
-}
-
-.bottom-container > button {
-  margin-bottom: 1rem;
-  padding: 1rem 3rem;
-  border: 0;
-  border-radius: 8px;
-
-  background: var(--clr-accent);
-  box-shadow: var(--box-shadow);
-  color: var(--clr-neutral-100);
-
-  font-size: 1.125rem;
-  font-weight: 800;
-}
-
-.body-column-right a,
-.body-column-right a:visited {
-  color: var(--clr-neutral-900);
 }
