@@ -27,7 +27,7 @@
 /* global defaults */
 
 p {
-  line-height: 1.7rem;
+  line-height: 1.8rem;
   max-width: 55ch;
 }
 
@@ -220,7 +220,12 @@ span {
   font-size: 0.875rem;
 }
 
-input:focus {
+input::placeholder {
+  color: hsl(0, 0%, 70%);
+}
+
+input:focus,
+input:focus:invalid {
   border: 2px solid var(--clr-accent-hover);
   box-shadow: var(--box-shadow);
 }
