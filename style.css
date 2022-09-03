@@ -11,4 +11,61 @@
 :root {
   --font-main: "Inter", sans-serif;
   --font-title: "Pacifico", cursive;
+  --clr-banner-bg: hsla(0, 0%, 6%, 40%);
+  --clr-neutral-900: hsl(0, 0%, 6%);
+  --clr-neutral-200: hsl(0, 0%, 86%);
+  --clr-neutral-100: hsl(0, 0%, 96%);
+}
+
+.body-container {
+  display: flex;
+  min-height: 100vh;
+
+  font-family: var(--font-main);
+}
+
+.body-column-left {
+  position: relative;
+  text-align: center;
+  background: var(--clr-neutral-200) url(./images/tea-background.jpg) no-repeat
+    center;
+  background-size: cover;
+  color: var(--clr-neutral-100);
+  width: 50vw;
+}
+
+.banner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+
+  margin-top: max(20vh, 1rem);
+  padding: 0.5rem;
+
+  background-color: var(--clr-banner-bg);
+
+  font-family: var(--font-title);
+  font-size: max(1.5rem, 2.5vw);
+}
+
+.tea-svg {
+  height: 2em;
+}
+
+.reference {
+  position: absolute;
+  bottom: 1em;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+a,
+a:visited {
+  color: var(--clr-neutral-100);
+}
+
+a:hover {
+  font-weight: 800;
 }
