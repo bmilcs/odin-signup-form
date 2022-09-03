@@ -112,6 +112,10 @@ a:focus {
 
 /* top section */
 
+.header-container {
+  margin-top: 3rem;
+}
+
 .header-container > p {
   margin-top: 1.7rem;
   font-size: clamp(14px, 1.125rem, 3vw);
@@ -156,6 +160,10 @@ a:focus {
 .body-column-right a,
 .body-column-right a:visited {
   color: var(--clr-neutral-900);
+}
+
+.bottom-container {
+  margin-bottom: 3rem;
 }
 
 /* form section */
