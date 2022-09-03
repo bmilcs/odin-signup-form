@@ -1,7 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;800&family=Pacifico&display=swap");
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+:root {
+  --font-main: "Inter", sans-serif;
+  --font-title: "Pacifico", cursive;
 }
