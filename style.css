@@ -18,6 +18,7 @@
   --clr-accent: hsl(198, 20%, 37%);
   --clr-accent-hover: hsl(198, 20%, 47%);
   --clr-error: hsl(0, 65%, 45%);
+  --clr-error-bg: hsl(0, 65%, 97%);
   --clr-success: hsl(146, 62%, 43%);
   --clr-banner-bg: hsla(0, 0%, 6%, 50%);
   --clr-shadow: hsla(0, 0%, 6%, 20%);
@@ -224,9 +225,9 @@ input {
 span {
   display: block;
   height: 1rem;
-  margin-bottom: 0.1rem;
+  margin-block: 0.1rem;
 
-  font-size: 0.875rem;
+  font-size: 0.75rem;
 }
 
 input::placeholder {
@@ -239,12 +240,9 @@ input:focus:invalid {
   box-shadow: var(--box-shadow);
 }
 
-/* input:invalid {
-  border: 2px solid var(--clr-error); 
-}*/
-
-.error:not[span] {
+input.error {
   border: 2px solid var(--clr-error);
+  background: var(--clr-error-bg);
 }
 
 .success {
