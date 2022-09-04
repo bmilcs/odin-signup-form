@@ -62,7 +62,7 @@ h3 {
   align-items: center;
   gap: 0.5rem;
 
-  margin-top: max(15vh, 2rem);
+  margin-top: max(10vh, 5rem);
   padding: 0.75em;
 
   background-color: var(--clr-banner-bg);
