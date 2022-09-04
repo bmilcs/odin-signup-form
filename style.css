@@ -240,6 +240,11 @@ input:focus:invalid {
   box-shadow: var(--box-shadow);
 }
 
+input.success:focus {
+  border: 2px solid var(--clr-success);
+  box-shadow: var(--box-shadow);
+}
+
 input.error {
   border: 2px solid var(--clr-error);
   background: var(--clr-error-bg);
