@@ -43,7 +43,9 @@ This project was fun, challenging and gave me an opportunity to practice a lot o
 
 ## Screenshots
 
-_None available_
+![Screenshot](images/screenshot1.png)
+
+![Validation](images/validation.png)
 
 ## Deployment
 
