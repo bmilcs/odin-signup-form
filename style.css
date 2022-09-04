@@ -18,6 +18,7 @@
   --clr-accent: hsl(198, 20%, 37%);
   --clr-accent-hover: hsl(198, 20%, 47%);
   --clr-error: hsl(0, 65%, 45%);
+  --clr-success: hsl(146, 62%, 43%);
   --clr-banner-bg: hsla(0, 0%, 6%, 50%);
   --clr-shadow: hsla(0, 0%, 6%, 20%);
   --box-shadow: 6px 4px 8px var(--clr-shadow);
@@ -238,12 +239,16 @@ input:focus:invalid {
   box-shadow: var(--box-shadow);
 }
 
-input:invalid {
-  /* border: 2px solid var(--clr-error); */
-}
+/* input:invalid {
+  border: 2px solid var(--clr-error); 
+}*/
 
 .error:not[span] {
   border: 2px solid var(--clr-error);
+}
+
+.success {
+  border: 2px solid var(--clr-success);
 }
 
 span.error {
