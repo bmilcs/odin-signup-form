@@ -1,51 +1,70 @@
 const signupForm = document.getElementById("signup-form");
-const firstName = document.getElementById("first_name");
-const lastName = document.getElementById("last_name");
-const email = document.getElementById("email");
-const phone = document.getElementById("phone");
-const password = document.getElementById("password");
-const passwordConfirm = document.getElementById("password_confirm");
-const input = document.querySelectorAll("input");
 
 // turn off default error messages
 signupForm.noValidate = true;
 
 // todo
-// on submit, validate all fields
 // on focus change, check validity
 // after focus change, swap to aggressive error checking
 
-const displayError = (field, message) => {
-  const errorSpan = field.parentElement.getElementsByTagName("span")[0];
-  errorSpan.textContent = message;
+function displayError(field, message = "") {
+  const errorMessage = field.parentElement.getElementsByTagName("span")[0];
+  errorMessage.textContent = message;
   field.classList.remove("success");
   field.classList.add("error");
-};
+}
 
-const displaySuccess = (field) => {
-  const errorSpan = field.parentElement.getElementsByTagName("span")[0];
-  errorSpan.textContent = "";
+function displaySuccess(field) {
+  const errorMessage = field.parentElement.getElementsByTagName("span")[0];
+  errorMessage.textContent = "";
   field.classList.remove("error");
   field.classList.add("success");
-};
+}
 
-// validate form on submission
-const validateForm = (e) => {
+function validateForm(e) {
   const form = e.target;
+  const field = Array.from(form.querySelectorAll("input"));
 
-  if (!form.checkValidity()) {
-    // form is invalid
-    //  check each field for validity
-    //  if invalid, displayError
-  } else {
-    input.forEach((i) => {
-      i.classList.add("success");
-      i.classList.remove("error");
-    });
+  // built-in html validation
+  field.forEach((i) => validateField(i));
+
+  // check for matching passwords
+  const password = form.querySelector("#password");
+  const passwordConfirm = form.querySelector("#password_confirm");
+
+  if (validateField(password) && validateField(passwordConfirm)) {
+    console.info("pw meet requirements");
+    if (password.value !== passwordConfirm.value) {
+      displayError(password, "Passwords must match");
+      displayError(passwordConfirm);
+    }
   }
-  e.preventDefault();
-  e.stopImmediatePropagation();
-};
+
+  if (!form.checkValidity() || !passwordsMatch) {
+    e.preventDefault();
+    e.stopImmediatePropagation();
+  }
+}
+
+function validateField(i) {
+  if (i.checkValidity()) {
+    displaySuccess(i);
+    // let password matching know minimum requirements weren't met
+    // prefer 8-32 char validation OVER inequality of values
+    return true;
+  } else {
+    // Field is invalid
+    if (i.id === "first_name" || i.id === "last_name") {
+      displayError(i, "Enter a valid name");
+    } else if (i.id === "email") {
+      displayError(i, "Enter a valid email address");
+    } else if (i.id === "phone") {
+      displayError(i, "Enter a valid phone number");
+    } else if (i.id === "password" || i.id === "password_confirm") {
+      displayError(i, "Passwords must be 8-32 characters long.");
+    } else displaySuccess(i);
+  }
+}
 
 // validate form on submit
 signupForm.addEventListener("submit", validateForm);
