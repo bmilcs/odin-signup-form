@@ -31,19 +31,21 @@ function validateForm(e) {
   // check for matching passwords
   const password = form.querySelector("#password");
   const passwordConfirm = form.querySelector("#password_confirm");
+  let passwordMismatch = 1;
 
   if (validateField(password) && validateField(passwordConfirm)) {
     console.info("pw meet requirements");
     if (password.value !== passwordConfirm.value) {
       displayError(password, "Passwords must match");
       displayError(passwordConfirm);
-    }
+      passwordMismatch = 1;
+    } else passwordMismatch = 0;
   }
 
-  if (!form.checkValidity() || !passwordsMatch) {
+  if (!form.checkValidity() || passwordMismatch) {
     e.preventDefault();
     e.stopImmediatePropagation();
-  }
+  } else alert("Success!");
 }
 
 function validateField(i) {
