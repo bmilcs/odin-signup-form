@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;800&family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Inter:wght@400;800&display=swap");
 
 *,
 *::before,
@@ -10,7 +10,7 @@
 
 :root {
   --font-main: "Inter", sans-serif;
-  --font-title: "Pacifico", cursive;
+  --font-title: "Berkshire Swash", cursive;
   --clr-neutral-900: hsl(0, 0%, 15%);
   --clr-neutral-800: hsl(0, 0%, 35%);
   --clr-neutral-200: hsl(0, 0%, 86%);
@@ -72,7 +72,7 @@ h3 {
 }
 
 .tea-svg {
-  height: 2.25em;
+  font-size: 2em;
 }
 
 .reference {
