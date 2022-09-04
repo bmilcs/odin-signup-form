@@ -48,6 +48,8 @@ function validateForm(e) {
     e.preventDefault();
     e.stopImmediatePropagation();
 
+    // activates live feedback as the user types: validates inputs & pw matching
+    // adds keyup eventhandler for all input fields
     enableAggressiveValidation(fieldArray, password, passwordConfirm);
   } else {
     // validation successful!
@@ -74,8 +76,6 @@ function validateField(field) {
       displayError(field, "Enter a valid phone number");
     } else if (field.id === "password" || field.id === "password_confirm") {
       displayError(field, "Passwords must be 8-32 characters long.");
-    } else {
-      displaySuccess(field);
     }
   }
 }

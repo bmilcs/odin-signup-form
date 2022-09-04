@@ -203,11 +203,11 @@ label {
 
   padding-block: 0.25rem;
 
+  color: var(--clr-neutral-800);
   font-size: 0.9rem;
   font-weight: bold;
   letter-spacing: 0.075rem;
   text-transform: uppercase;
-  color: var(--clr-neutral-800);
 }
 
 input {
