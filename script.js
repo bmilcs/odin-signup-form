@@ -113,8 +113,5 @@ function enableAggressiveValidation(fieldArray, password, passwordConfirm) {
   });
 }
 
-//todo
-// on focus change, check validity
-
 // validate form on submit
 signupForm.addEventListener("submit", validateForm);
