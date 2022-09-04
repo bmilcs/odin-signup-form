@@ -86,7 +86,7 @@ h3 {
 }
 
 .body-column-left a,
-.body-column-lefta:visited {
+.body-column-left a:visited {
   color: var(--clr-neutral-100);
 }
 
@@ -99,6 +99,7 @@ a:focus {
 
 .body-column-right {
   flex-grow: 1;
+  position: relative;
 
   display: flex;
   flex-direction: column;
@@ -127,7 +128,6 @@ a:focus {
   font-size: clamp(38px, 3.875rem, 4vw);
   color: var(--clr-accent);
   text-transform: uppercase;
-  /* letter-spacing: 0.075em; */
 }
 
 .header-container > h3 {
@@ -152,20 +152,54 @@ a:focus {
 
   font-size: 1.125rem;
   font-weight: 800;
+
+  transition: background ease-in 0.2s;
 }
 
 .bottom-container > button:hover,
 .bottom-container > button:focus {
   background: var(--clr-accent-hover);
+  transition: background ease-in 0.2s;
 }
 
-.body-column-right a,
-.body-column-right a:visited {
+.body-column-right p a,
+.body-column-right p a:visited {
   color: var(--clr-neutral-900);
 }
 
 .bottom-container {
   margin-bottom: 3rem;
+}
+
+/* github link */
+
+.github {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.github a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: var(--clr-neutral-100);
+  font-weight: 800;
+
+  transition: color ease-in 0.2s;
+}
+
+.github a:hover {
+  color: var(--clr-accent);
+  transition: color ease-in 0.2s;
+}
+
+.github img {
+  height: 3rem;
 }
 
 /* form section */
@@ -192,10 +226,6 @@ a:focus {
 .form-right-column {
   flex-grow: 1;
   max-width: 22.5rem;
-}
-
-.input-container {
-  /* , */
 }
 
 label {
@@ -238,20 +268,24 @@ input:focus,
 input:focus:invalid {
   border: 2px solid var(--clr-accent-hover);
   box-shadow: var(--box-shadow);
+  transition: border ease-in 0.2s;
 }
 
 input.success:focus {
   border: 2px solid var(--clr-success);
   box-shadow: var(--box-shadow);
+  transition: border ease-in 0.2s;
 }
 
 input.error {
   border: 2px solid var(--clr-error);
   background: var(--clr-error-bg);
+  transition: border ease-in 0.2s;
 }
 
 .success {
   border: 2px solid var(--clr-success);
+  transition: border ease-in 0.2s;
 }
 
 span.error {

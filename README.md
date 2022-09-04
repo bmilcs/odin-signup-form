@@ -24,6 +24,11 @@ Welcome to Bryan Miller's Sign-up Form Project, the [sixth assignment](https://w
 - Chrome DevTools & Debugging
 - Git Fundamentals
 
+## Links
+
+- [Live Demo](https://bmilcs.github.io/odin-signup-form/)
+- [My Odin Project Progress](https://github.com/bmilcs/op)
+
 ## Summary
 
 A combination of built-in HTML and JavaScript constraint validation were used to accomplish this project. I didn't want to aggressively alert the user of input errors before they had a chance to complete the form so validation occurs after the submit button is pressed for the first time.
@@ -35,11 +40,6 @@ Return values notify the initial `validateForm()` function call whether or not t
 The `aggressiveValidation()` function is called, which activates live feedback as the user types using the `keyup` EventListener, until all input fields have valid values.
 
 This project was fun, challenging and gave me an opportunity to practice a lot of new skills.
-
-## Links
-
-- [Live Demo](https://bmilcs.github.io/odin-signup-form/)
-- [My Odin Project Progress](https://github.com/bmilcs/op)
 
 ## Screenshots
 
