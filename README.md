@@ -37,7 +37,7 @@ Once the user hits submit, the `validateForm()` function is called. `validateFor
 
 Return values notify the initial `validateForm()` function call whether or not the form validation was successful. When a user provides an improperly formatted input value, visual feedback in the form of colorful borders are applied to all input elements (green for valid, red for invalid) and error messages are displayed in `<span>` elements below the guilty parties.
 
-The `aggressiveValidation()` function is called, which activates live feedback as the user types using the `keyup` EventListener, until all input fields have valid values.
+The `aggressiveValidation()` function is also called on first submission, which activates live feedback as the user types (using the `keyup` EventListener).
 
 This project was fun, challenging and gave me an opportunity to practice a lot of new skills.
 
