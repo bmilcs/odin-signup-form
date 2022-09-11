@@ -27,7 +27,7 @@ Welcome to Bryan Miller's Sign-up Form Project, the [sixth assignment](https://w
 ## Links
 
 - [Live Demo](https://bmilcs.github.io/odin-signup-form/)
-- [My Odin Project Progress](https://github.com/bmilcs/op)
+- [My Odin Project Progress](https://github.com/bmilcs/odin-project)
 
 ## Summary
 
